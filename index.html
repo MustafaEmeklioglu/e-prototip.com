@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-Prototip | Plastik ve Metal Hızlı Prototip Üretimi – SLS Lazer Sinterleme, İzmir</title>
+<meta name="description" content="E-Prototip; SLS lazer sinterleme ve DMLS metal lazer sinterleme teknolojileriyle plastik ve metal hızlı prototip üretimi yapar. 2008'den beri İzmir, Bornova.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<style>
+  :root{
+    --ink:#1d232b; --ink-2:#4a5562; --muted:#6b7683; --line:#e3e7ec;
+    --bg:#ffffff; --bg-soft:#f4f6f8; --dark:#151a21; --accent:#e4572e; --accent-dark:#c2431f;
+    --max:1080px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--accent-dark)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+
+  /* Header */
+  header.site{position:sticky;top:0;z-index:10;background:rgba(21,26,33,.96);backdrop-filter:saturate(1.2) blur(6px)}
+  header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .brand{color:#fff;text-decoration:none;font-weight:700;letter-spacing:.08em;font-size:18px}
+  .brand span{color:var(--accent)}
+  nav a{color:#d7dde4;text-decoration:none;margin-left:28px;font-size:15px;letter-spacing:.03em}
+  nav a:hover{color:#fff}
+
+  /* Hero */
+  .hero{background:var(--dark);color:#fff}
+  .hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;padding-top:72px;padding-bottom:72px}
+  .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:13px;color:var(--accent);font-weight:600;margin:0 0 14px}
+  .hero h1{font-size:44px;line-height:1.15;margin:0 0 18px;font-weight:700}
+  .hero p.lead{font-size:19px;color:#c9d1da;margin:0 0 28px}
+  .btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:13px 24px;border-radius:6px;font-weight:600;font-size:16px}
+  .btn:hover{background:var(--accent-dark)}
+  .btn.ghost{background:transparent;border:1px solid #4b5563;margin-left:10px}
+  .btn.ghost:hover{border-color:#9aa4af;background:transparent}
+  .hero img{border-radius:10px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+
+  /* Sections */
+  section{padding:80px 0}
+  section.soft{background:var(--bg-soft)}
+  h2{font-size:32px;margin:0 0 8px;line-height:1.2}
+  h3{font-size:23px;margin:48px 0 12px;line-height:1.3}
+  h4{font-size:18px;margin:32px 0 8px}
+  .section-intro{color:var(--muted);margin:0 0 36px;font-size:18px}
+  p{margin:0 0 16px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:36px 0 0}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:10px;padding:22px}
+  .fact b{display:block;font-size:26px;color:var(--accent-dark);margin-bottom:4px}
+  .fact span{color:var(--ink-2);font-size:15px}
+  .sectors{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0 0;padding:0;list-style:none}
+  .sectors li{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:15px;color:var(--ink-2)}
+
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;margin:20px 0}
+  figure{margin:24px 0}
+  figcaption{font-size:14px;color:var(--muted);margin-top:8px}
+  .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+  .gallery img{border-radius:8px;aspect-ratio:4/3;object-fit:cover;width:100%}
+  .gallery.tall{grid-template-columns:repeat(3,auto);justify-content:start;align-items:end}
+  .gallery.tall img{aspect-ratio:auto;height:240px;width:auto;object-fit:contain;background:#fff}
+  .card-img{border-radius:8px;border:1px solid var(--line);background:#fff}
+
+  .table-wrap{overflow-x:auto;margin:20px 0 28px;border:1px solid var(--line);border-radius:10px}
+  table{border-collapse:collapse;width:100%;font-size:15px;background:#fff}
+  th,td{padding:10px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+  th{background:var(--bg-soft);font-weight:600;color:var(--ink-2);font-size:14px;white-space:normal;vertical-align:bottom}
+  tr:last-child td{border-bottom:0}
+  td:first-child{font-weight:600}
+
+  .note{border-left:3px solid var(--accent);background:#fff;padding:14px 18px;border-radius:0 8px 8px 0;color:var(--ink-2)}
+
+  /* Contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+  .contact-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+  .contact-card dl{margin:0;display:grid;grid-template-columns:90px 1fr;row-gap:12px}
+  .contact-card dt{color:var(--muted)}
+  .contact-card dd{margin:0;font-weight:500}
+  .contact-card a{text-decoration:none}
+
+  footer{background:var(--dark);color:#9aa4af;font-size:14px;padding:28px 0}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+
+  @media (max-width:820px){
+    body{font-size:16px}
+    nav a{margin-left:16px;font-size:14px}
+    .hero .wrap,.split,.contact-grid{grid-template-columns:1fr}
+    .hero h1{font-size:34px}
+    .facts{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr 1fr}
+    section{padding:56px 0}
+  }
+  @media (max-width:480px){
+    .brand{font-size:15px}
+    nav a{margin-left:12px;font-size:13px}
+    .gallery{grid-template-columns:1fr}
+    .gallery.tall{grid-template-columns:1fr 1fr}
+    .btn.ghost{margin:10px 0 0}
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#">E-<span>PROTOTİP</span></a>
+    <nav>
+      <a href="#hakkimizda">Hakkımızda</a>
+      <a href="#uretimlerimiz">Üretimlerimiz</a>
+      <a href="#iletisim">İletişim</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">SLS · DMLS · Hızlı Prototip</p>
+      <h1>Plastik ve metal hızlı prototip üretimi</h1>
+      <p class="lead">3D CAD datalarınızdan, kalıp ve takım yatırımı gerektirmeden, birkaç gün içinde prototip ve ön seri parça.</p>
+      <a class="btn" href="#iletisim">Teklif İsteyin</a><a class="btn ghost" href="#uretimlerimiz">Üretimlerimiz</a>
+    </div>
+    <img src="img/sls-makineler.jpg" alt="E-Prototip SLS lazer sinterleme makineleri" width="817" height="613">
+  </div>
+</div>
+
+<section id="hakkimizda" class="soft">
+  <div class="wrap">
+    <h2>Hakkımızda</h2>
+    <p class="section-intro">Plastik ve metal hızlı prototip üretmekteyiz. Kuruluş yılımız 2008.</p>
+    <p>E-Prototip, büyük SLS lazer sinterleme kapasitesi ve tecrübeli kadrosuyla, uygun fiyat ve kısa teslim süresi sunan prototip üretim merkezi. Tasarımdan üretime hızlı geçişte, güçlü ve güvenilir çözüm ortağınız.</p>
+    <p>3D CAD datalarınız ve lazer sinterleme teknolojilerimizle yapılan ürünleriniz, birkaç gün içinde elinizde. Hem de kalıp ve takım yatırımlarına girmeden. İster ürün geliştirme projelerinizde değerlendirin, isterseniz seri üretimlerinizin parçası olarak kullanın.</p>
+    <p>Yoğun olarak hizmet verdiğimiz sektörler:</p>
+    <ul class="sectors">
+      <li>Beyaz eşya</li><li>Savunma</li><li>Otomotiv</li><li>Havacılık</li><li>Medikal</li><li>Ambalaj</li><li>Makine</li><li>Elektrik ve elektronik</li>
+    </ul>
+    <div class="facts">
+      <div class="fact"><b>2008</b><span>yılından beri prototip üretimi</span></div>
+      <div class="fact"><b>340×340×620 mm</b><span>tek parça maksimum üretim kapasitesi</span></div>
+      <div class="fact"><b>Plastik + Metal</b><span>SLS ve DMLS lazer sinterleme</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="uretimlerimiz">
+  <div class="wrap">
+    <h2>Üretimlerimiz</h2>
+    <p class="section-intro">Lazer sinterleme teknolojisiyle kalıp kullanmadan, sadece 3 boyutlu modellerden (3D CAD dataları) üretim.</p>
+
+    <div class="split">
+      <div>
+        <h3 style="margin-top:0">SLS: Lazer Sinterleme</h3>
+        <p>SLS prototipler, lazer sinterleme teknolojisiyle kalıp kullanılmadan, sadece 3 boyutlu modeller (3D CAD dataları) ile üretilir.</p>
+        <p>Kısıtlamalar içermeyen tasarımların üretimleri, toz halindeki hammaddelerin düşük katman kalınlıklarında lazer ışını enerjisiyle eritilerek birleştirilmesiyle gerçekleştirilir.</p>
+        <p>Prototip ya da ön seri parça gereksinimleriniz, katmanlı üretim prosesiyle, talaşlı üretime göre daha kısa sürede ve daha ucuza gerçekleştirilir. Klasik yöntemlerle üretilmesi imkânsız olan ters açılı ve kapalı kesitler, iç boşaltmalar, kısaca aklınıza gelebilecek tüm detaylar yapılır.</p>
+      </div>
+      <figure style="margin-top:0">
+        <img class="card-img" src="img/cad-model.jpg" alt="3D CAD modeli" width="252" height="188">
+        <figcaption>Üretim, 3D CAD datası ile başlar.</figcaption>
+      </figure>
+    </div>
+
+    <h3>Plastik Lazer Sinterleme (Plastik SLS)</h3>
+    <p>Polyamid (naylon), polistiren ve elastomer bazlı toz malzemeler kullanılır.</p>
+    <p>Bilgisayar ortamında hazırlanan 3D katı modeller, düşey eksende 0,1 mm kalınlıkta 2 boyutlu katmanlara bölünür. Toz yayma ünitesiyle makine üretim platformuna serilen aynı kalınlıktaki toz malzeme, erime noktasının birkaç derece altına kadar ısıtılır. İlk katmandaki CAD data kesiti lazer ışınıyla taranarak eritilen toz taneciklerinin birleşmesi sağlanır. Platform katman kalınlığına eşit değerde aşağı iner ve üzerine 2. katmanı oluşturacak yeni toz malzeme yayılır. Ortamdaki rezistanslarla ısıtılır ve bu katmandaki yeni kesit lazer ışınıyla taranır. Eriyen tozlar birleşirken, bir önceki katmanda taranmış ve henüz sıvı fazda bulunan malzemeyle bütünleşir. Proses, ardışık işlemlerle, tüm 2D CAD kesitleri taranana kadar sürer. Soğuma periyodu sonrası makineden çıkarılan platformdaki katılaşmış prototipler, çevrelerindeki lazerle taranmamış tozlar temizlenerek alınır.</p>
+    <figure>
+      <img class="card-img" src="img/sls-proses-semasi.png" alt="SLS lazer sinterleme prosesi şeması" width="734" height="488">
+      <figcaption>Plastik SLS üretim prosesi.</figcaption>
+    </figure>
+    <p>Sağlam, darbeye ve yüksek sıcaklıklara dayanıklı prototiplerle, nihai ürün olarak kullanılacak parçalar elde edilir. Fonksiyonel testler, görsel sunumlar, montajlı setler ve ön seri üretimler için ideal alternatiftir. Çalışan tırnaklı geçme ve hareketli menteşe detayları kolaylıkla üretilir.</p>
+    <figure>
+      <img class="card-img" src="img/plastik-prototipler.jpg" alt="SLS ile üretilmiş plastik prototip örnekleri" width="831" height="756" style="max-width:640px">
+      <figcaption>SLS ile üretilmiş plastik prototip örnekleri.</figcaption>
+    </figure>
+    <p>Üretilen en küçük prototipler birkaç mm boyutlarındayken, 2 m ve daha büyük prototipler de üretilmektedir. Makinelerimizin tek parça olarak maksimum üretim kapasitesi 340×340×620 mm'dir. Daha büyük prototiplerin üretimi için 3D model, kırlangıç kuyruğu ya da testere ağzı gibi geçme detaylarıyla bilgisayar ortamında kesilir. Ayrı üretilen parçalar yapıştırılarak birleştirilir ve prototip tek parça halinde teslim edilir.</p>
+    <p class="note">Minimum et kalınlığı 0,6 mm. Boyut toleransları geometriye bağlı olmakla birlikte ±0,2 mm (100 mm altı), ±%0,2 (100 mm üstü).</p>
+
+    <h4>Plastik malzemeler</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Malzeme</th><th>Elastiklik modülü (N/mm²)</th><th>Çekme dayanımı (N/mm²)</th><th>Kopma uzaması (%)</th><th>Sertlik (Shore)</th><th>Yoğunluk (g/cm³)</th><th>Erime sıcaklığı (°C)</th></tr></thead>
+        <tbody>
+          <tr><td>PA2200</td><td>1700</td><td>45</td><td>20</td><td>75 (D)</td><td>0,9–0,95</td><td>172–180</td></tr>
+          <tr><td>PA3200 GF</td><td>3200</td><td>48</td><td>6</td><td>80 (D)</td><td>0,9–0,95</td><td>172–180</td></tr>
+          <tr><td>ALUMIDE</td><td>3800</td><td>46</td><td>3,5</td><td>76 (D)</td><td>1,35–1,36</td><td>172–180</td></tr>
+          <tr><td>PRIMECAST</td><td>1600</td><td>1,2–5,5</td><td>0,4</td><td>–</td><td>0,7–0,85</td><td>–</td></tr>
+          <tr><td>SOMOS</td><td>20</td><td>3</td><td>110</td><td>75 (A)</td><td>0,68</td><td>156</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4>Yüzey işlemleri</h4>
+    <p>Prototipler her tür boya ile boyanabilir. RAL renk kodlarına göre özel boya hazırlanabilir. Vakum altında krom ve benzeri metal kaplamalar yapılır.</p>
+    <p>Vidalı bağlantılar içeren modellerde diş detayları SLS üretiminde gerçekleştirilir, sonradan kılavuz çekilmesine gerek kalmaz. Arzu edilmesi durumunda pirinç insert uygulaması yapılır.</p>
+
+    <h3>Metal Lazer Sinterleme (DMLS)</h3>
+    <p>Metal lazer sinterleme teknolojisinde, 3D CAD modeli datalarından oluşturulan 0,02–0,06 mm kalınlığındaki metal tozu katmanlarındaki kesitler lazer ışınıyla taranır. Çelik plaka üzerinde, destek (support) yapıları kullanılarak üretim yapılır.</p>
+    <figure>
+      <img class="card-img" src="img/dmls-proses-semasi.png" alt="DMLS metal lazer sinterleme prosesi şeması" width="1200" height="424">
+      <figcaption>Metal lazer sinterleme prosesi.</figcaption>
+    </figure>
+    <div class="gallery">
+      <img src="img/metal-ornek-1.jpg" alt="DMLS ile üretilmiş metal parça örneği" width="631" height="473">
+      <img src="img/metal-ornek-2.jpg" alt="DMLS ile üretilmiş metal parça örneği" width="633" height="475">
+      <img src="img/metal-ornek-3.jpg" alt="DMLS ile üretilmiş metal parça örnekleri" width="640" height="480">
+    </div>
+    <p>Kalıp sektöründe de metal lazer sinterleme yoğun olarak kullanılmaktadır. Kalıp çekirdekleri, maça ve insertleri, soğutma plaka ve pimlerini örnek uygulamalar olarak sayabiliriz. Keskin iç köşeler ve zor geometrik detaylar kolaylıkla üretilir.</p>
+    <figure>
+      <img class="card-img" src="img/metal-dislileri.jpg" alt="Metal lazer sinterleme ile üretilmiş parçalar" width="422" height="271">
+    </figure>
+    <p>25×25×25 mm boyutlarından daha küçük, birçok frezeleme ve erozyon operasyonu gerektiren kompleks kalıp insertleri için de ideal çözümdür.</p>
+    <div class="gallery tall">
+      <img src="img/kalip-insert-1.jpg" alt="Kalıp insert örneği" width="232" height="537">
+      <img src="img/kalip-insert-2.jpg" alt="Kalıp insert örneği" width="232" height="429">
+      <img src="img/kalip-insert-3.jpg" alt="Kalıp insert örneği" width="428" height="274">
+    </div>
+    <p>Derin slot delikler, ters açılı kesitler, yüzeye yakın helezonik soğutma kanalları (conformal cooling), spiral kanallı soğutma plaka ve pimleri için tek yöntemdir.</p>
+    <figure>
+      <img class="card-img" src="img/conformal-cooling.png" alt="Conformal cooling soğutma kanalları" width="668" height="521" style="max-width:520px">
+      <figcaption>Yüzeye yakın soğutma kanalları (conformal cooling).</figcaption>
+    </figure>
+    <p>Elde edilen yüzey pürüzlülüğü değerleri 4,5 ile 6,3 Ra arasındadır. Ayna parlaklığı veya kozmetik yüzeyler için ek işlemler uygulanır.</p>
+    <div class="gallery" style="grid-template-columns:1fr 1fr">
+      <img src="img/metal-yuzey-1.jpg" alt="Metal parça yüzey örneği" width="430" height="275">
+      <img src="img/metal-yuzey-2.jpg" alt="Metal parça yüzey örneği" width="776" height="581">
+    </div>
+
+    <h4>Metal malzemeler</h4>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Malzeme</th><th>Tip</th><th>Elastiklik modülü (GPa)</th><th>Çekme dayanımı (MPa)</th><th>Akma dayanımı (MPa)</th><th>Sertlik</th></tr></thead>
+        <tbody>
+          <tr><td>DirectMetal 20</td><td>Bronz bazlı toz malzeme</td><td>80</td><td>400</td><td>200</td><td>115 (HV)</td></tr>
+          <tr><td>DirectSteel 20</td><td>Çelik bazlı toz malzeme</td><td>130</td><td>580</td><td>400</td><td>180 (HB)</td></tr>
+          <tr><td>DirectSteel H20</td><td>Çelik bazlı toz malzeme</td><td>180</td><td>1100</td><td>800</td><td>35–42 (HRC)</td></tr>
+          <tr><td>EOS MaragingSteel MS1</td><td>1.2709</td><td>–</td><td>1900</td><td>1700</td><td>36–39 (HRC)</td></tr>
+          <tr><td>EOS CobaltChrome MP1</td><td>CoCrMo alaşımlı</td><td>210</td><td>1300</td><td>1000</td><td>40–45 (HRC)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>Metal lazer sinterleme ile üretilen ham parçanın yüzey pürüzlülüğü Ra 10 (Rz 50) değerlerindedir. Yüzeylerin çelik ve seramik tozlarla kumlanmasıyla pürüzlülük Ra 4 (Rz 15) değerine düşürülür. Yüzey parlatma işlemlerinin uygulanmasıyla ise Rz 1 değerinin de altına inilerek ayna yüzey parlaklığına ulaşılabilir.</p>
+    <p>Büyük metal prototipler ve kalıp parçalarına, 1–2 saat aralığında 250–500 °C sıcaklıklarda ısıl gerilim giderme uygulaması yapılır.</p>
+    <p>Metal SLS malzemelerinin karbon içerikleri düşük olduğu için klasik ısıl sertleştirme işlemleri uygulanmaz. Alternatif olarak 200–500 °C sıcaklık aralığında PVD kaplamalar veya 400 °C sıcaklıkların altında nitrürasyon işlemleri uygulanabilir.</p>
+  </div>
+</section>
+
+<section id="iletisim" class="soft">
+  <div class="wrap">
+    <h2>İletişim</h2>
+    <p class="section-intro">3D CAD datanızı gönderin, prototipiniz için teklif hazırlayalım.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h3 style="margin-top:0;font-size:20px">E Prototip San. ve Tic. Ltd. Şti.</h3>
+        <dl>
+          <dt>Adres</dt><dd>2. Sanayi Sitesi, 357/2 Sok. No:10<br>Bornova, İzmir, Türkiye</dd>
+          <dt>Telefon</dt><dd><a href="tel:+902324618114">0 232 461 81 14</a></dd>
+          <dt>Faks</dt><dd>0 232 461 81 38</dd>
+          <dt>E-posta</dt><dd><a href="mailto:e@e-prototip.com">e@e-prototip.com</a></dd>
+        </dl>
+      </div>
+      <div class="contact-card">
+        <h3 style="margin-top:0;font-size:20px">Teklif için</h3>
+        <p>Teklif hazırlayabilmemiz için e-postanıza şunları eklemeniz yeterli:</p>
+        <ul style="padding-left:20px;margin:0 0 20px">
+          <li>3D CAD datası (STEP, IGES veya STL)</li>
+          <li>Adet ve tercih ettiğiniz malzeme</li>
+          <li>Varsa yüzey işlemi ve teslim tarihi beklentisi</li>
+        </ul>
+        <a class="btn" href="mailto:e@e-prototip.com?subject=Prototip%20teklif%20talebi">E-posta Gönderin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© E Prototip San. ve Tic. Ltd. Şti.</span>
+    <span>Bornova, İzmir</span>
+  </div>
+</footer>
+
+</body>
+</html>
